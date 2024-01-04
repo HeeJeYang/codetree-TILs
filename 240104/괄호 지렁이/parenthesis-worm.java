@@ -14,6 +14,7 @@ public class Main {
         N = Integer.parseInt(br.readLine());
         matrix = new char[N][N];
         visited = new boolean[N][N];
+        visited[0][0] = true;
 
         for (int i = 0; i < N; i++) {
             String brackets = br.readLine();
@@ -22,9 +23,14 @@ public class Main {
             }
         }
 
-        dfs(0, 0, 0, 0);
+        if (matrix[0][0] == ')') {
+            System.out.println(0);
+        } else {
+            dfs(0, 0, 1, 0);
+            System.out.println(answer);
+        }
 
-        System.out.println(answer);
+
     }
 
     public static void dfs(int y, int x, int left, int right) {
