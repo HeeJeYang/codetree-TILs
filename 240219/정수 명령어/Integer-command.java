@@ -10,6 +10,7 @@ public class Main {
         TreeSet<Integer> numbers = new TreeSet<>();
         int T = Integer.parseInt(br.readLine());
         for (int tc = 0; tc < T; tc++) {
+            numbers.clear();
             int k = Integer.parseInt(br.readLine());
             for (int i = 0; i < k; i++) {
                 st = new StringTokenizer(br.readLine());
