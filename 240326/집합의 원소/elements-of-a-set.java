@@ -28,7 +28,7 @@ public class Main {
                     break;
                 
                 case '1':
-                    if (list[a] == list[b]) sb.append("1");
+                    if (find(a) == find(b)) sb.append("1");
                     else sb.append("0");
 
                     sb.append("\n");
